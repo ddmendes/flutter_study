@@ -16,6 +16,13 @@ class MyApp extends StatelessWidget {
             DaviAvatar(),
             NameLabel(),
             RoleLabel(),
+            SizedBox(
+              height: 20.0,
+              width: 130.0,
+              child: Divider(
+                color: Colors.teal.shade100,
+              ),
+            ),
             PhoneLabel(),
             EmailLabel(),
           ],
@@ -68,31 +75,24 @@ class RoleLabel extends StatelessWidget {
 class PhoneLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
+    return Card(
       margin: EdgeInsets.symmetric(
         horizontal: 25.0,
         vertical: 10.0,
       ),
-      padding: EdgeInsets.all(10.0),
-      child: Row(
-        children: <Widget>[
-          Icon(
-            Icons.phone,
-            color: Colors.teal,
+      child: ListTile(
+        leading: Icon(
+          Icons.phone,
+          color: Colors.teal,
+        ),
+        title: Text(
+          '+55 19 98324 9323',
+          style: TextStyle(
+            fontFamily: 'SourceSansPro',
+            color: Colors.teal.shade900,
+            fontSize: 18.0,
           ),
-          SizedBox(
-            width: 10.0,
-          ),
-          Text(
-            '+55 19 98324 9323',
-            style: TextStyle(
-              fontFamily: 'SourceSansPro',
-              color: Colors.teal.shade900,
-              fontSize: 18.0,
-            ),
-          )
-        ],
+        ),
       ),
     );
   }
@@ -101,31 +101,24 @@ class PhoneLabel extends StatelessWidget {
 class EmailLabel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.white,
+    return Card(
       margin: EdgeInsets.symmetric(
         horizontal: 25.0,
         vertical: 10.0,
       ),
-      padding: EdgeInsets.all(10.0),
-      child: Row(
-        children: <Widget>[
-          Icon(
-            Icons.mail,
-            color: Colors.teal,
+      child: ListTile(
+        leading: Icon(
+          Icons.mail,
+          color: Colors.teal,
+        ),
+        title: Text(
+          'ddioriomendes@gmail.com',
+          style: TextStyle(
+            fontFamily: 'SourceSansPro',
+            color: Colors.teal.shade900,
+            fontSize: 18.0,
           ),
-          SizedBox(
-            width: 10.0,
-          ),
-          Text(
-            'ddioriomendes@gmail.com',
-            style: TextStyle(
-              fontFamily: 'SourceSansPro',
-              color: Colors.teal.shade900,
-              fontSize: 18.0,
-            ),
-          )
-        ],
+        ),
       ),
     );
   }
